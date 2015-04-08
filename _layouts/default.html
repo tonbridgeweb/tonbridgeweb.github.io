@@ -16,32 +16,12 @@
   <body>
     <div class="wrapper-masthead">
       <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-          
-          <h1 class="site-description"><a href="{{ site.baseurl }}/">Hi, I'm Barry Clark, a web developer from NYC. I write about web development and how to get hired.</a></h1>
-          
-          <nav>
-            <a href="{{ site.baseurl }}/about/">About</a>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/web-developer-career-newsletter/">Newsletter</a>
-          </nav>
+        <header class="masthead clearfix">          
+          <h1 class="site-description"><a href="{{ site.baseurl }}/">Tonbridge Web</a></h1>
         </header>
       </div>
     </div>
 
-    <div id="main" role="main">
-      {{ content }}
-    </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
   </body>
 </html>
