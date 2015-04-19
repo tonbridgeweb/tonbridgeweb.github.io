@@ -2,4 +2,36 @@
 layout: default
 ---
 
-<h2>Coming soon</h2>
+<main class="intro">
+	<div class="container">
+    <div class="post">
+      <p>Tonbridge Web is a free activity-based meetup run monthly by <a href="http://calumryan.com" target="_blank">Calum Ryan</a> that's aimed at anyone who works within/with the web industry.</p>
+      <h1>Next meetup:</h1>
+    </div>
+	</div>
+</main>
+
+<div class="posts">
+  {% for post in site.posts %}
+    {% unless post.draft %}
+    <article class="post">    
+
+      <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
+
+      <div class="post-inner">
+      
+        <h1>{{ post.title }}</h1>
+
+        <time>Start: {{ post.start-time }}, Finish: {{ post.finish-time }}</time>
+
+        <div class="entry">
+          {{ post.content | split:"<!--more-->" | first }}
+        </div>
+  
+      </div>
+
+
+    </article>
+    {% endunless %}
+  {% endfor %}
+</div>

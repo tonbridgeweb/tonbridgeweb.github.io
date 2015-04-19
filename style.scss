@@ -17,9 +17,10 @@ html {
 }
 
 body {
-  background: $white;
+  background: #FFF;
   font: 18px/1.7 $helvetica;
-  color: $gray;
+  color: #666;
+  min-width: 300px;
 }
 
 .container {
@@ -31,24 +32,35 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
+  color: #666;
+  font-weight:400;
   
   line-height: 1.4;
   margin: 1em 0 15px;
   padding: 0;
+
+  a {
+    color: $brand;
+  }
+}
+
+.event-date {
+    color: #FFF;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 40px 0 10px;
+    background: $brand;
 }
   
 h1 {
   font-size: 28px;
-  a {
-    color: inherit;
-  }
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 h2 {  
-  font-size: 24px;
-  padding-top: 20px;
+  font-size: 18px;
 }
 
 h3 {  
@@ -60,24 +72,36 @@ h4 {
   color: $gray;
 }
 
+time {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 5px 0;
+  border-bottom: 1px solid #CCC;
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+}
+
 p {
   margin: 15px 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
 }
 
 a {
-  color: $blue;
+  color: $brand;
   text-decoration: none;
   cursor: pointer;
-  // &:hover, &:active {
-  //   color: $orange;
-  // }
+  &:hover, &:active {
+     color: #666;
+     text-decoration: underline;
+  }
 }
 
 a.see-more {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
-  color: $gray;
+  color: #FFF;
 }
 
 ul, ol {
@@ -378,6 +402,12 @@ nav {
 .posts > .post {
   padding-bottom: 1em;
   border-bottom: 1px solid $lighterGray;
+
+  &:first-child {
+    .event-date {
+        margin-top: 15px;
+    }
+  }
 }
 
 .posts > .post:last-child {
@@ -398,9 +428,7 @@ nav {
 
 .wrapper-footer {
   margin-top: 40px;
-  border-top: 1px solid $lightGray;
-  border-bottom: 1px solid $lightGray;
-  background-color: $lighterGray;
+  background-color: #505050;
 }
 
 footer {
@@ -467,3 +495,40 @@ footer {
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_highlights";
+
+.masthead {
+  background-image: url(images/tonbridgewebhero.jpg);
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+  background-size:cover;
+}
+
+#tonbridgeweb-logo {
+    width: 300px;
+    height: 231px;
+    display: block;
+    margin: 0 auto;
+    float: left;
+}
+
+.intro {
+  padding-top: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    line-height: 32px;
+    font-size: 25px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .post-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
