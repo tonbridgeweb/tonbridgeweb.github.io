@@ -365,6 +365,8 @@ nav {
 //
 
 .post, .page {
+  display: table;
+  clear: both;
   max-width: 640px;
   margin: 0 auto;
   @media screen and (max-width: 730px) {
@@ -536,7 +538,7 @@ footer {
   height: 70px;
   padding: 10px;
   margin: 5px auto;
-  display: table;
+  display: block;
   clear: both;
 
   svg {
