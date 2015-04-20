@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: #FFF;
+  background-color: #505050;
   font: 18px/1.7 $helvetica;
   color: #666;
   min-width: 300px;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px 10px;
     text-align: center;
     margin: 40px 0 10px;
-    background: $brand;
+    background: #737373;
 }
   
 h1 {
@@ -214,13 +214,15 @@ form {
 .button {
   display: inline-block;
   margin-bottom: 0;
-  padding: 0.4em 0.7em 0.4em;
+  padding: 0.4em 1em 0.4em;
   vertical-align: middle;
   border-radius: 2px;
   border: 0;
   
-  background: $orange;
+  background: $brand;
   color: $white;
+
+  border-radius:4px;
 
   font-size: 18px;
   font-family: $helvetica;
@@ -233,6 +235,12 @@ form {
   white-space: nowrap;
   -webkit-appearance: none;
   cursor: pointer;
+
+  &:hover {
+    color: #FFF;
+    text-decoration: none;
+    background: #505050;
+  }
 }
 
 // Specify the color of the selection
@@ -408,6 +416,12 @@ nav {
         margin-top: 15px;
     }
   }
+
+  .button {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .posts > .post:last-child {
@@ -426,8 +440,12 @@ nav {
   }
 }
 
+.fill {
+  padding-bottom: 40px;
+  background:#FFF;
+}
+
 .wrapper-footer {
-  margin-top: 40px;
   background-color: #505050;
 }
 
@@ -511,6 +529,24 @@ footer {
     float: left;
 }
 
+.act {
+  background:$brand;
+  border-radius: 45px;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  margin: 5px auto;
+  display: table;
+  clear: both;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill:#FFF;
+    display: block;
+  }
+}
+
 .intro {
   padding-top: 20px;
   text-align: center;
@@ -521,7 +557,7 @@ footer {
 
   p {
     line-height: 32px;
-    font-size: 25px;
+    font-size: 28px;
   }
 
 }

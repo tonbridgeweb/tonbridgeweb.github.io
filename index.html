@@ -22,11 +22,15 @@ layout: default
       
         <h1>{{ post.title }}</h1>
 
+        {% include activities.html %}
+
         <time>Start: {{ post.start-time }}, Finish: {{ post.finish-time }}</time>
 
         <div class="entry">
           {{ post.content | split:"<!--more-->" | first }}
         </div>
+
+        <a class="button" target="_blank" href="{{post.event-url}}">Attending?</a>
   
       </div>
 
