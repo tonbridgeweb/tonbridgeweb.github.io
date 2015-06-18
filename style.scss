@@ -571,6 +571,22 @@ p.sub, .sub, .intro p.sub {
   padding: 0 20%;
 }
 
+.entry {
+
+  ul {
+      padding: 0 0 0 25px;
+      list-style-type: square;
+      margin-bottom: 25px;
+  }
+
+  li {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+      font-size: 18px;
+      margin: 0;
+  }
+  
+}
+
 @media screen and (min-width: 768px) {
   .post-inner {
     padding-left: 15px;
