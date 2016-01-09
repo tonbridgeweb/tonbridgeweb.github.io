@@ -15,27 +15,30 @@ layout: default
 <div class="posts">
   {% for post in site.posts limit:10 sort:"date" %}
     {% unless post.draft %}
-    <article class="post">    
+      {% if post.categories contains 'current' %}
+      {% else %}
+      <article class="post">    
 
-      <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
+        <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
 
-      <div class="post-inner">
-      
-        <h1>{{ post.title }}</h1>
+        <div class="post-inner">
+        
+          <h1>{{ post.title }}</h1>
 
-        {% include activities.html %}
+          {% include activities.html %}
 
-        <time>Start: {{ post.start-time }}, Finish: {{ post.finish-time }}</time>
+          <time>Start: {{ post.start-time }}, Finish: {{ post.finish-time }}</time>
 
-        <div class="entry">
-          {{ post.content | split:"<!--more-->" | first }}
+          <div class="entry">
+            {{ post.content | split:"<!--more-->" | first }}
+          </div>
+
+    
         </div>
 
-  
-      </div>
 
-
-    </article>
+      </article>
+      {% endif %}
     {% endunless %}
   {% endfor %}
 </div>
