@@ -7,12 +7,41 @@ layout: default
     <div class="post">
       <p>Tonbridge Web is a free activity-based meetup run by <a href="http://calumryan.com" target="_blank">Calum Ryan</a> that's aimed at anyone who works within/with the web industry.</p>
       <p class="sub">Planned activities are generally at weekends and offer an opportunity to socialise in an open-environment including walking and cycling normally concluding at a cafe/pub.</p>
-      <h1>Past meetups:</h1>
+      <h1>Next meetup</h1>
+      {% for post in site.posts limit:10 sort:"date" %}
+        {% unless post.draft %}
+          {% if post.categories contains 'current' %}
+          <article class="post">    
+
+            <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
+
+            <div class="post-inner">
+            
+              <h1>{{ post.title }}</h1>
+
+              {% include activities.html %}
+
+              <time>Start: {{ post.start-time }}, Finish: {{ post.finish-time }}</time>
+
+              <div class="entry">
+                {{ post.content | split:"<!--more-->" | first }}
+              </div>
+
+        
+            </div>
+
+
+          </article>
+          {% else %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
     </div>
 	</div>
 </main>
 
 <div class="posts">
+  <h2>Past meetups:</h2>
   {% for post in site.posts limit:10 sort:"date" %}
     {% unless post.draft %}
       {% if post.categories contains 'current' %}
