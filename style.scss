@@ -601,7 +601,8 @@ p.sub, .sub, .intro p.sub {
 }
 
 .nextup {
-  width: 100%
+  width: 100%;
+  background-color: $brand;
   display: table;
   padding-top: 30px;
   padding-bottom: 30px;
