@@ -608,9 +608,12 @@ p.sub, .sub, .intro p.sub {
   padding-bottom: 30px;
   color: #FFF;
 
+  .event-date {
+    margin-top: 0;
+  }
+
   h1 {
     margin-top: 0;
-    margin-bottom: 30px;
     color: #FFF;
   }
 }
