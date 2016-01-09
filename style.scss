@@ -431,6 +431,12 @@ nav {
   border-bottom: none;
 }
 
+.posts h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: -30px;
+}
+
 .post {
   blockquote {
     margin: 1.5em 0.5em;
@@ -591,5 +597,17 @@ p.sub, .sub, .intro p.sub {
   .post-inner {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+.nextup {
+  width: 100%
+  display: table;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #FFF;
+
+  h1 {
+    margin-top: 0;
   }
 }
