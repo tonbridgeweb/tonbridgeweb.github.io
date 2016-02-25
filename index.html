@@ -15,37 +15,29 @@ layout: default
 <section class="nextup">
   <div class="container">
       <h1>Next meetup</h1>
+      {% for post in site.posts limit:1 sort:"date" %}
+          {% if post.categories contains 'current' %}
+          <article class="post">    
 
-  {% for post in site.posts limit:10 sort:"date" %}
-    {% unless post.draft %}
-      {% if post.categories contains 'current' %}
-      
-      <article class="post">    
+            <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
 
-        <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
+            <div class="post-inner">
+            
+              <h1>{{ post.title }}</h1>
 
-        <div class="post-inner">
+              <time>Start: {{ post.start-time }}, Finish: {{ post.finish-time }}</time>
+
+              <div class="entry">
+                {{ post.content | split:"<!--more-->" | first }}
+              </div>
+
         
-          <h1>{{ post.title }}</h1>
-
-          {% include activities.html %}
-
-          <time>Start: {{ post.start-time }}, Finish: {{ post.finish-time }}</time>
-
-          <div class="entry">
-            {{ post.content | split:"<!--more-->" | first }}
-          </div>
-
-    
-        </div>
+            </div>
 
 
-      </article>
-      {% else %}
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
-
+          </article>
+          {% endif %}
+      {% endfor %}
 
   </div>
 </section>
