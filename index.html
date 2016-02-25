@@ -15,8 +15,8 @@ layout: default
 <section class="nextup">
   <div class="container">
       <h1>Next meetup</h1>
-      {% for post in site.posts limit:3 %}
-          {% if post.categories contains 'new' %}
+      {% for post in site.posts limit:1 %}
+          {% if post.categories contains 'New' %}
           <article class="post">    
 
             <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
