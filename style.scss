@@ -412,6 +412,7 @@ nav {
 .posts > .post {
   padding-bottom: 1em;
   border-bottom: 1px solid $lighterGray;
+  display: block;
 
   &:first-child {
     .event-date {
