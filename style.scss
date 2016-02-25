@@ -206,11 +206,6 @@ form {
     margin: 0.25em 0;
   }
 
-  .button-attend {
-    display: table;
-    margin: auto;
-  }
-
   p {
     font-size: 12px;
   }
@@ -247,6 +242,11 @@ form {
     background: #505050;
   }
 }
+
+  .button-attend {
+    display: table;
+    margin: auto;
+  }
 
 // Specify the color of the selection
 ::-moz-selection {
