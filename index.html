@@ -16,7 +16,7 @@ layout: default
   <div class="container">
       <h1>Next meetup</h1>
       {% for post in site.posts limit:1 sort:"date" %}
-
+          {% if post.categories contains 'current' %}
           <article class="post">    
 
             <div class="event-date">{{ post.date | date: "%A, %B %-d, %Y" }}</div>
@@ -36,7 +36,7 @@ layout: default
 
 
           </article>
-
+          {% endif %}
       {% endfor %}
 
   </div>
