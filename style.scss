@@ -243,10 +243,11 @@ form {
   }
 }
 
-  .button-attend {
-    display: table;
-    margin: auto;
-  }
+.button-attend {
+  display: table;
+  margin: auto;
+  font-weight: 600;
+}
 
 // Specify the color of the selection
 ::-moz-selection {
